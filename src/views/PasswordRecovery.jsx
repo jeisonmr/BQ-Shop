@@ -1,7 +1,7 @@
 import React from "react";
-import "../components/styles/recovery.scss";
+import "../styles/recovery.scss";
 
-export const Recovery = () => {
+export const PasswordRecovery = () => {
   return (
   <div className="login">
     <div className="form-container">

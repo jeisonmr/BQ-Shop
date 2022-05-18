@@ -1,5 +1,5 @@
 // import logo from "../../../global/utils/img/logo.svg";
-import "../components/styles/Login.scss";
+import "../styles/Login.scss";
 
 export const Login = () => {
   return (
