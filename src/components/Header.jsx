@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import "./styles/Header.scss";
+import { Menu } from "./Menu";
 
 export const Header = () => {
+  const [toggle, setToggle] = useState(false);
+  const handleToggle = () => {
+    setToggle(!toggle);
+  };
   return (
     <nav>
       <img src="./icons/icon_menu.svg" alt="menu" className="menu" />
@@ -30,13 +35,16 @@ export const Header = () => {
       </div>
       <div className="navbar-right">
         <ul>
-          <li className="navbar-email">platzi@example.com</li>
+          <li onClick={handleToggle} className="navbar-email">
+            platzi@example.com
+          </li>
           <li className="navbar-shopping-cart">
             <img src="./icons/icon_shopping_cart.svg" alt="shopping cart" />
             <div>2</div>
           </li>
         </ul>
       </div>
+      {toggle && <Menu />}
     </nav>
   );
 };

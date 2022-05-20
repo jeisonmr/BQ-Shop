@@ -1,42 +1,21 @@
-// import logo from "../../../global/utils/img/logo.svg";
-import "../styles/Login.scss";
+import React from 'react';
+import '../styles/Login.scss';
 
 export const Login = () => {
-  return (
-        <div className="login">
-          <div className="form-container">
-            {/* <img src={logo} atl="logo" className="logo App-logo" /> */}
-
-            <h1 className="title">Create a new password</h1>
-            <p className="subtitle">Enter a new password for you account</p>
-
-            <form action="/" className="form">
-              <label className="label" for="password">
-                Password
-              </label>
-              <input
-                type="password"
-                className="input input-password"
-                placeholder="**************"
-              ></input>
-
-              <label className="label" for="new-password">
-                Confirm Password
-              </label>
-              <input
-                type="password"
-                id="new-password"
-                placerholder="*************"
-                className="input input-password"
-              ></input>
-
-              <input
-                type="submit"
-                value="Confirm"
-                className="primary-button login-button"
-              ></input>
-            </form>
-          </div>
-        </div>
-  );
+	return (
+		<div className="Login">
+			<div className="Login-container">
+				<img src="./logos/logo_yard_sale.svg" alt="logo" className="logo" />
+				<form action="/" className="form">
+					<label htmlFor="email" className="label">Email address</label>
+					<input type="text" id="email" placeholder="platzi@example.cm" className="input input-email" />
+					<label htmlFor="password" className="label">Password</label>
+					<input type="password" id="password" placeholder="*********" className="input input-password" />
+					<input type="submit" value="Log in" className="primary-button login-button" />
+					<a href="/">Forgot my password</a>
+				</form>
+				<button className="secondary-button signup-button">Sign up</button>
+			</div>
+		</div>
+	);
 }

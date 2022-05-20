@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Layaout } from "../containers/Layaout"
 import { Login } from "../views/Login";
 import { PasswordRecovery } from "../views/PasswordRecovery";
 import { NewPassword } from "../views/NewPassword";
@@ -15,6 +16,7 @@ import { NotFound } from "../views/NotFound";
 export const Root = () => {
   return (
     <BrowserRouter>
+    <Layaout/>
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route exact path="/login" element={<Login />} />
